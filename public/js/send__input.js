@@ -1,7 +1,7 @@
 
 const player_input = document.getElementById('search-player');
 const btn = document.getElementById('submit-player');
-
+const resp = document.getElementById('response');
 
 
 /* btn.addEventListener('click', function(){
@@ -31,6 +31,7 @@ btn.addEventListener('click', function () {
         })
     }).then(res => {
         if (res.ok) {
+            resp.outerHTML = res.statusText;
             console.log('fetch was successful');
             console.log(res);
         }
